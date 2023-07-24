@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+	background: linear-gradient(150deg, #71b7e6, #9b59b6);
+	animation: changeBackground 30s infinite alternate-reverse;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	box-sizing: border-box;
+}
+
+.container {
+	width: 100%;
+	min-height: 100vh;
+	padding: 10px;
+}
+
+.todo-app {
+	width: 100%;
+	max-width: 550px;
+	background: #fff;
+	margin: 100px auto 20px;
+	border-radius: 10px;
+	padding: 40px 30px 70px;
+	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.todo-app h2 {
+	color: #333;
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+	width: 30px;
+	margin-left: 10px;
+}
+
+.row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #edeef0;
+	border-radius: 30px;
+	padding-left: 20px;
+	margin-bottom: 25px;
+}
+
+input {
+	flex: 1;
+	border: none;
+	outline: none;
+	background: transparent;
+	padding: 10px;
+	font-weight: 14px;
+}
+
+button {
+	border: none;
+	outline: none;
+	padding: 16px 50px;
+	background: #ff5e45f5;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 30px;
+}
+
+ul li {
+	list-style: none;
+	font-size: 17px;
+	padding: 12px 8px 12px 50px;
+	user-select: none;
+	cursor: pointer;
+	position: relative;
+}
+
+ul li::before {
+	content: '';
+	position: absolute;
+	height: 28px;
+	width: 28px;
+	border-radius: 50%;
+	background-image: url(images/unchecked.png);
+	background-size: cover;
+	background-position: center;
+	top: 12px;
+	left: 8px;
+}
+
+ul li.checked {
+	color: #555;
+	text-decoration: line-through;
+}
+
+ul li.checked::before {
+	background-image: url(images/checked.png);
+}
+
+ul li span {
+	position: absolute;
+	right: 0px;
+	top: 5px;
+	width: 40px;
+	height: 40px;
+	font-size: 22px;
+	columns: #555;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 50%;
+}
+
+ul li span:hover {
+	background: #edeef0;
+}
+
+/*author information*/
+.info-autor {
+	letter-spacing: 2px;
+	width: 100%;
+	padding: 30px;
+	text-align: center;
+}
+
+.info-autor>p {
+	font-style: normal;
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 150%;
+	border: none;
+	color: #000;
+	padding: 10px;
+}
+
+.info-autor>p>a {
+	text-decoration: none;
+	color: #000;
+}
+
+.info-autor>p>a:hover {
+	color: #495057;
+}
+
+@keyframes changeBackground {
+
+	0%,
+	100% {
+		background: linear-gradient(150deg, #00b4db, #0083b0);
+	}
+
+	25% {
+		background: linear-gradient(150deg, #7f7fd5, #86a8e7, #91eae4);
+	}
+
+	50% {
+		background: linear-gradient(150deg, #4e54c8, #8f94fb);
+	}
+
+	75% {
+		background: linear-gradient(150deg, #74ebd5, #acb6e5);
+	}
+}
